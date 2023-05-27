@@ -1,6 +1,6 @@
 import { PayloadAction, createSlice } from "@reduxjs/toolkit";
 import { getGalleryAction } from "./getGalleryAction";
-import { GalleryItemType } from "../Type/GalleryItemType";
+import { GalleryItemType } from "../GalleryItems/Type/GalleryItemType";
 import { InitState } from "./InitState";
 
 
@@ -8,7 +8,16 @@ import { InitState } from "./InitState";
 const gallerySlice = createSlice({
     name:'gallery',
     initialState:InitState,
-    reducers:{},
+    reducers:{
+        updateSearch:(state,action:PayloadAction<string>)=>{
+            state.search = action.payload;
+            console.log(state.search);
+        },
+        setKanjiToModal:(state,action:PayloadAction<string>)=>{
+            state.modalKanjiToShow = action.payload
+
+        }
+    },
     extraReducers:{
 
     [getGalleryAction.fulfilled.type]:(state,action:PayloadAction<any[]>)=>{
@@ -34,5 +43,6 @@ const gallerySlice = createSlice({
     },
 })
 
+export const {updateSearch,setKanjiToModal} = gallerySlice.actions;
 
 export default gallerySlice.reducer;

@@ -1,5 +1,5 @@
 import { createAsyncThunk } from "@reduxjs/toolkit";
-import { getPictures } from "../service/getPictures";
+import { getPictures } from "../GalleryItems/service/getPictures";
 
 
 export const getGalleryAction = createAsyncThunk(
