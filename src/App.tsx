@@ -49,7 +49,7 @@ function App() {
       <ModalFullInfo />
       <Search />
       <div className='my-3 mt-5 row  row-cols-1 row-cols-md-5 mb-3 text-center'>
-        {
+        {galleryItems.length===0? <>Loading...</> :
           galleryItems.map((a,i)=>{
             return(
               <CardGalleryItem key={`card-${i}`} 

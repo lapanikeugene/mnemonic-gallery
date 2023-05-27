@@ -1,6 +1,6 @@
 export const graphqlQuery  = `
   query NewQuery {
-    posts {
+    posts (first: 1000) {
       nodes {
         title
         textInfo {
