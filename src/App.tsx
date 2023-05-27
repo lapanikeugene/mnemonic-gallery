@@ -25,7 +25,14 @@ function App() {
         {
           galleryItems.map((a,i)=>{
             return(
-              <Card key={`card-${i}`}/>
+              <Card key={`card-${i}`} 
+                    kanji={a.title} 
+                    img={a.img} 
+                    on={a.on} 
+                    kun={a.kun} 
+                    translation={a.translation} 
+                    mnemonic={a.mnemonic} 
+                    descr={a.description}/>
             )
           })
         }
