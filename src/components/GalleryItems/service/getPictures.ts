@@ -3,7 +3,7 @@ import { graphqlQuery } from "./graphqlQuery";
 
 export const getPictures = async()=>{
 
-    const res = await axios.get('https://gallery.eugenelapanik.com/index.php?graphql',
+    const res = await axios.get('',
     {
         params:{
             query:graphqlQuery
