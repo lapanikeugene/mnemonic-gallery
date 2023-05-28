@@ -48,7 +48,13 @@ function App() {
     <>
       <ModalFullInfo />
       <Search />
-      <div className='my-3 mt-5 row  row-cols-1 row-cols-md-5 mb-3 text-center'>
+      <div className='my-3 mt-5 row  row-cols-1 row-cols-md-5 mb-3 text-center'
+            style={{
+              maxWidth:'1200px',
+              marginLeft:'auto',
+              marginRight:'auto',
+            }}
+      >
         {galleryItems.length===0? <>Loading...</> :
           galleryItems.map((a,i)=>{
             return(

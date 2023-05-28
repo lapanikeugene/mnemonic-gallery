@@ -24,7 +24,7 @@ export const CardGalleryItem = (props:CardType) => {
     }
 
     return (
-        <Card className=' mx-1 my-1 p-0' style={{minWidth:'250px',}}>
+        <Card className=' mx-1 my-1 p-0' style={{minWidth:'280px',}}>
             <Card.Header className="text-center"><h3 className="card-title">{props.kanji}</h3></Card.Header>
             <div className='d-flex justify-content-center'>
             <img className=""
@@ -33,7 +33,7 @@ export const CardGalleryItem = (props:CardType) => {
              src={props.img} alt="Card image cap" />
             </div>
             
-    <div className="card-body p-0">
+    <div className="card-body p-1 h-100">
     <div className='p-2 bg-light mb-3'
         style={{borderLeft: '4px solid #5bc0de',}}    
         >
@@ -50,11 +50,11 @@ export const CardGalleryItem = (props:CardType) => {
       </div>
       <p className="card-text text-start"><strong>Translation</strong>: {props.translation}</p>
       
-      <Card.Footer className="text-muted">
+      
+    </div>
+    <Card.Footer className="text-muted">
         <Button variant='primary' onClick={handleShowModal}  >Full Info</Button>
       </Card.Footer>
-    </div>
-            
         </Card>
     );
 };

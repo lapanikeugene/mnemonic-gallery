@@ -21,7 +21,7 @@ const gallerySlice = createSlice({
     extraReducers:{
 
     [getGalleryAction.fulfilled.type]:(state,action:PayloadAction<any[]>)=>{
-        console.log('in actions:',action.payload);
+        // console.log('in actions:',action.payload);
         const arr:GalleryItemType[] = [];
         for(const item of action.payload){
             console.log('item',item);
