@@ -27,6 +27,7 @@ export const CardGalleryItem = (props:CardType) => {
             <Card.Header className="text-center"><h3 className="card-title">{props.kanji}</h3></Card.Header>
             <div className='d-flex justify-content-center'>
             <img className=""
+             loading='lazy'
              onClick={handleShowModal}
              style={{width:'280px',objectFit:'contain'}} 
              src={props.img} alt="Card image cap" />
