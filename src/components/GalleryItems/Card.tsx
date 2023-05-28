@@ -1,5 +1,4 @@
 // @flow 
-import * as React from 'react';
 import parse from 'html-react-parser';
 import Card from 'react-bootstrap/Card';
 import { Button } from 'react-bootstrap';

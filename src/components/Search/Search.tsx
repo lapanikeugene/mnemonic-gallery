@@ -1,7 +1,6 @@
 
 // @flow 
 import * as React from 'react';
-import { Button } from 'react-bootstrap';
 import { useAppDispatch } from '../../hooks';
 import { updateSearch } from '../redux/gallerySlice';
 
