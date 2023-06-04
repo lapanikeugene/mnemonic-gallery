@@ -13,8 +13,17 @@ function App() {
   const gallerySelector = useAppSelector(s=>s.galleryReducer.GalleryItems);
   const searchTerm = useAppSelector(s=>s.galleryReducer.search);
   const [galleryItems,setGallleryItems ] = useState<GalleryItemType[]>([]);
+  const [hideGaller,setHideGallery] = useState(true);
   useEffect(()=>{
-    dispatch(getGalleryAction());
+    const pass = localStorage.getItem('pass');
+  
+    if(pass===import.meta.env.VITE_PASS){
+        
+        dispatch(getGalleryAction());
+        setHideGallery(false);
+      }else{
+        localStorage.setItem('pass','');
+      }
   },[])
 
   useEffect(()=>{
@@ -46,6 +55,7 @@ function App() {
 
   return (
     <>
+    {!hideGaller&&<>
       <ModalFullInfo />
       <Search />
       <div className='my-3 mt-5 row  row-cols-1 row-cols-md-5 mb-3 text-center'
@@ -71,6 +81,7 @@ function App() {
         }
 
         </div>
+        </>}
     </>
   )
 }

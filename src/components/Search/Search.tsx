@@ -14,7 +14,7 @@ export const Search = () => {
     }
 
     return (
-        <div>
+        <div className='mx-5'>
            <strong>Search:</strong> <input className='w-100' onChange={handleChange} placeholder='Search by kanji, or translation'/> 
         </div>
     );
